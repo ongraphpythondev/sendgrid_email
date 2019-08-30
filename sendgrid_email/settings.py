@@ -121,6 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Django Email Settings for SendGrid
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 EMAIL_HOST = 'smtp.sendgrid.net'

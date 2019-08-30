@@ -3,7 +3,7 @@ from .forms import EmailForm
 from django.core.mail import send_mail
 
 
-# Create your views here.
+# Rendering and Sending Email
 def index(request):
     if request.method == 'POST':
         email_form = EmailForm(request.POST)
@@ -12,7 +12,7 @@ def index(request):
             subject = email_form.cleaned_data['subject']
             body = email_form.cleaned_data['body']
             _from = email_form.cleaned_data['_from']
-            send_mail(subject, body, _from, [to],
+            send_mail(subject, body, _from, [to],     # Sending The Email
                       fail_silently=False)
     else:
         email_form = EmailForm()
