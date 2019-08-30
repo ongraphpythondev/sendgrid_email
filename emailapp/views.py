@@ -14,8 +14,6 @@ def index(request):
             _from = email_form.cleaned_data['_from']
             send_mail(subject, body, _from, [to],
                       fail_silently=False)
-        else:
-            email_form = EmailForm()
     else:
         email_form = EmailForm()
     return render(request, 'emailapp/email_form.html', {'email_form': email_form})
