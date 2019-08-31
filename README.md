@@ -26,9 +26,9 @@ To get the email application to work you would need to [create](https://sendgrid
 ## Installation:
 
 ```bash
-git clone https://github.com/ongraphpythondev/SendgridEmail.git
+git clone https://github.com/ongraphpythondev/sendgrid_email.git
 
-cd SendgridEmail
+cd sendgrid_email
 
 virtualenv venv
       or
@@ -41,7 +41,7 @@ source venv/bin/activate # for linux
 # install required packages for the project to run
 pip install -r requirements.txt
 ```
-In Project directory's SendgridEmail/settings.py file you would need to either change
+In Project directory's sendgrid_email/settings.py file you would need to either change
 ```python
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 ```
